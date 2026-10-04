@@ -254,10 +254,10 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 .reg-foot { padding: 1rem clamp(1.6rem, 4vw, 2.5rem); background: #FFF1DD; border-top: 4px solid var(--saffron); font-weight: 600; color: #6B3E05; }
 
 /* Venue / contact */
-.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; font-size: 1.3rem;}
 .info { background: var(--white); padding: 1.5rem; border-top: 5px solid var(--green); }
 .info:nth-child(2) { border-top-color: var(--crimson); }
-.info h3 { font-size: 1.35rem; color: var(--indigo); margin-bottom: .5rem; }
+.info h3 { font-size: 1.65rem; color: var(--indigo); margin-bottom: .5rem; }
 .info p:last-child { margin-bottom: 0; }
 
 /* Footer */
