@@ -294,7 +294,7 @@ footer em { color: #FFD7A6; }
 .board-under {
   display: block; margin: .8rem 0 0; text-align: right; user-select: none; pointer-events: none;
   color: rgba(255,255,255,.2);
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.1rem, 2.5vw, 2.2rem);
   -webkit-mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
           mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
 }
