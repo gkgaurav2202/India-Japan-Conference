@@ -259,36 +259,36 @@ footer em { color: #FFD7A6; }
 }
 .board-left {
   left: 4%; top: 1rem;
-  -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
-          mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
+          mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
 }
 .board-right {
   right: 4%; top: clamp(9rem, 18vw, 14.5rem); text-align: right;
-  -webkit-mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
-          mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
+  -webkit-mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,.4) 100%);
+          mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,.4) 100%);
 }
 .board-left mjx-container, .board-right mjx-container { margin: 0 !important; }
+
+/* Tablets and phones: first formula at the top, second formula just under the title */
 @media (max-width: 1100px) {
-  .board-left, .board-right { font-size: clamp(.85rem, 2.4vw, 1.2rem); color: rgba(255,255,255,.18); }
-  .board-left  { top: .8rem; }
-  .board-right { top: .8rem; }
+  .board-left { top: .8rem; font-size: clamp(.85rem, 2.4vw, 1.2rem); color: rgba(255,255,255,.18); }
+  .board-right { display: none; }
+  .hero:not(.slim) .theme::before {
+    content: "ζ(a) ζ(b) = ζ(a, b) + ζ(b, a) + ζ(a + b)";
+    display: block; margin: 0 0 1.1rem;
+    font-size: .6em; color: rgba(255,255,255,.28);
+  }
 }
-/* Phones: the second formula sits just under the title */
+
+/* Phones */
 @media (max-width: 600px) {
   .hero:not(.slim) { padding-bottom: 6rem; }
-  .board-right {
-    position: static; display: block; margin: 1rem 0 0; text-align: left;
-    font-size: clamp(.9rem, 3.6vw, 1.15rem);
-    -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
-            mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
-  }
   .blackboard { background: rgba(8,14,40,.9); }
   .hero::before {   /* shorter wave band on phones */
     -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 20%);
             mask-image: linear-gradient(to top, #000 0%, transparent 20%);
   }
 }
-/* ============ Grid + wave pattern on every indigo section ============ */
 :root {
   --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
 }
