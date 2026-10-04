@@ -7,13 +7,10 @@
   var items = [
     ['Home',       'index.html'],
     ['Speakers',   'speakers.html'],
-    ['Organisers', 'index.html#organisers'],
     ['Schedule',   'schedule.html'],
     ['Talks',      'talks.html'],
     ['Photos',     'photos.html'],
-    ['Venue',      'venue.html'],
     ['Register',   'index.html#register'],
-    ['Contact',    'index.html#venue']
   ];
 
   var header = document.getElementById('site-header');
