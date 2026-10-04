@@ -5,7 +5,6 @@
   --green:    #138808;
   /* Japan */
   --crimson:  #BC002D;
-  --sakura:   #F6C6D0;
   /* Shared indigo */
   --indigo:   #16224A;
   --indigo-2: #223067;
@@ -20,6 +19,9 @@
   --ribbon: linear-gradient(90deg,
     var(--saffron) 0 16.66%, #fff 16.66% 33.33%, var(--green) 33.33% 50%,
     #fff 50% 66.66%, var(--crimson) 66.66% 83.33%, #fff 83.33% 100%);
+
+  /* wave pattern used on the dark sections */
+  --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.10' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
 
   --display: "Shippori Mincho", "Hiragino Mincho ProN", "Noto Serif", Georgia, serif;
   --text:    "STIX Two Text", "Times New Roman", Times, Georgia, serif;
@@ -77,7 +79,7 @@ a { color: inherit; }
 }
 .hero::before {  /* seigaiha waves rising from the bottom */
   content: ""; position: absolute; inset: 0; z-index: -3;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.10' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: var(--waves);
   background-size: 72px 36px;
   -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 34%);
           mask-image: linear-gradient(to top, #000 0%, transparent 34%);
@@ -165,11 +167,11 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 /* Organisers */
 .organisers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 1.2rem; }
 .organisers li { flex: 1 1 0; min-width: 0; padding: 1rem 1.3rem; background: var(--white); border-top: 4px solid var(--saffron); }
-@media (max-width: 800px) { .organisers { flex-wrap: wrap; } .organisers li { flex: 1 1 240px; } }
 .organisers li:nth-child(3n+2) { border-top-color: var(--green); }
 .organisers li:nth-child(3n+3) { border-top-color: var(--crimson); }
 .organisers h3 { font-size: 1.2rem; color: var(--indigo); }
 .organisers p { margin: .2rem 0 0; font-size: 1rem; color: var(--muted); font-style: italic; }
+@media (max-width: 800px) { .organisers { flex-wrap: wrap; } .organisers li { flex: 1 1 240px; } }
 
 /* Schedule page */
 .daynav { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1rem; }
@@ -216,8 +218,23 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 .lightbox img { max-width: 100%; max-height: 90vh; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
 
 /* Registration */
-#register { background-color: var(--indigo); background-image: none; color: #fff; position: relative; overflow: hidden; }
+#register { background-color: var(--indigo); background-image: none; color: #fff; position: relative; overflow: hidden; isolation: isolate; }
 #register .wrap { position: relative; }
+#register::before {   /* waves rising from the bottom */
+  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background-image: var(--waves); background-size: 72px 36px;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 40%);
+          mask-image: linear-gradient(to top, #000 0%, transparent 40%);
+}
+#register::after {    /* graph-paper grid fading downward */
+  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+          mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+}
 #register .sec-head h2 { color: #fff; }
 #register .sec-head h2::after {
   background:
@@ -249,38 +266,6 @@ footer::before { content: ""; display: block; height: 8px; background: var(--rib
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 footer strong { color: #fff; font-family: var(--display); font-size: 1.1rem; }
 footer em { color: #FFD7A6; }
-:root {
-  --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* Registration section */
-#register { isolation: isolate; }
-#register::before {   /* waves rising from the bottom */
-  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
-  background-image: var(--waves); background-size: 72px 36px;
-  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 40%);
-          mask-image: linear-gradient(to top, #000 0%, transparent 40%);
-}
-#register::after {    /* graph-paper grid fading downward */
-  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
-  background-size: 40px 40px;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
-          mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
-}
-/* ===== Header back to normal; logos in the footer ===== */
-.nav .wrap { justify-content: space-between; }
-.nav nav { margin-left: 0; }
-.nav .brand { display: block; }
-@media (max-width: 1000px) { .nav .brand { display: none; } }
-
-footer .footer-logos {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: .8rem 1.4rem;
-  padding-bottom: 1.2rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,.14);
-}
-footer .footer-logos img { display: block; height: 44px; width: auto; max-width: 100%; background: #fff; padding: 4px 9px; border-radius: 3px; }
-/* ===== Footer: logos next to the conference name ===== */
+/* logos next to the conference name */
 footer .footer-id { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
 footer .footer-id img { display: block; height: 52px; width: auto; max-width: 100%; background: #fff; padding: 4px 10px; border-radius: 3px; }
