@@ -181,7 +181,7 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 .timeline li { position: relative; display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .9rem 0 .9rem 1.6rem; }
 .timeline li::before {
   content: ""; position: absolute; left: -10px; top: 1.35rem; width: 17px; height: 17px; border-radius: 50%;
-  background: var(--white); border: 3px solid var(--indigo-2);
+  background: var(--indigo-2); border: 3px solid var(--indigo-2);
 }
 .timeline li.break::before { border-color: var(--saffron); background: var(--saffron); }
 .timeline li.lunch::before { border-color: var(--green);   background: var(--green); }
