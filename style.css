@@ -289,3 +289,11 @@ footer em { color: #FFD7A6; }
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
           mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
 }
+/* Second formula: just under the title */
+.board-right { display: none; }
+.board-under {
+  display: block; margin: 1rem 0 0; user-select: none; pointer-events: none;
+  color: rgba(255,255,255,.2);
+  font-size: clamp(.95rem, 2.2vw, 1.5rem);
+}
+.board-under mjx-container { margin: 0 !important; }
