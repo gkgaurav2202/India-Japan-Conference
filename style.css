@@ -283,4 +283,4 @@ footer .footer-logos {
 footer .footer-logos img { display: block; height: 44px; width: auto; max-width: 100%; background: #fff; padding: 4px 9px; border-radius: 3px; }
 /* ===== Footer: logos next to the conference name ===== */
 footer .footer-id { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
-footer .footer-id img { display: block; height: 40px; width: auto; max-width: 100%; background: #fff; padding: 3px 8px; border-radius: 3px; }
+footer .footer-id img { display: block; height: 52px; width: auto; max-width: 100%; background: #fff; padding: 4px 10px; border-radius: 3px; }
