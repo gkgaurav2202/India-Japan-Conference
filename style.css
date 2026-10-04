@@ -272,3 +272,8 @@ footer em { color: #FFD7A6; }
 /* logos next to the conference name */
 footer .footer-id { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
 footer .footer-id img { display: block; height: 52px; width: auto; max-width: 100%; background: #fff; padding: 4px 10px; border-radius: 3px; }
+/* one-line titles in the registration section */
+#register .sec-head { max-width: none; }
+#register .sec-head h2 { white-space: nowrap; font-size: clamp(1rem, 3.8vw, 2.7rem); }
+.reg-card { container-type: inline-size; }
+.reg-body h3 { white-space: nowrap; font-size: clamp(.85rem, 4.2cqw, 1.6rem); }
