@@ -162,8 +162,9 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 .speaker .aff { margin: .3rem 0 0; font-size: 1rem; color: var(--muted); font-style: italic; }
 
 /* Organisers */
-.organisers { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
-.organisers li { padding: 1rem 1.3rem; background: var(--white); border-top: 4px solid var(--saffron); }
+.organisers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 1.2rem; }
+.organisers li { flex: 1 1 0; min-width: 0; padding: 1rem 1.3rem; background: var(--white); border-top: 4px solid var(--saffron); }
+@media (max-width: 800px) { .organisers { flex-wrap: wrap; } .organisers li { flex: 1 1 240px; } }
 .organisers li:nth-child(3n+2) { border-top-color: var(--green); }
 .organisers li:nth-child(3n+3) { border-top-color: var(--crimson); }
 .organisers h3 { font-size: 1.2rem; color: var(--indigo); }
