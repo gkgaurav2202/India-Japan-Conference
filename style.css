@@ -270,3 +270,17 @@ footer em { color: #FFD7A6; }
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
           mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
 }
+/* ===== Two institute logos in the menu ===== */
+.nav .wrap { justify-content: flex-start; }
+.nav nav { margin-left: auto; min-width: 0; }
+.nav ul { gap: 1.2rem; }
+.nav-logos { display: flex; align-items: center; gap: .5rem; flex: none; }
+.nav-logos a { display: flex; }
+@media (max-width: 1100px) { .nav-logos ~ .brand { display: none; } }
+.nav-logos img { display: block; height: 36px; width: auto; max-width: min(150px, 22vw); object-fit: contain; background: #fff; padding: 3px 7px; border-radius: 3px; }
+
+/* ===== Hosted-by strip ===== */
+.hosts { background: #fff; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.hosts .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 2.4rem; }
+.hosts-label { margin: 0; color: var(--muted); font-style: italic; }
+.hosts img { display: block; height: 56px; width: auto; max-width: 100%; }
