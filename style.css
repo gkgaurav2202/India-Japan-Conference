@@ -274,7 +274,7 @@ footer em { color: #FFD7A6; }
   .board-left  { top: .8rem; }
   .board-right { top: auto; bottom: .9rem; }
 @media (max-width: 600px) {
-  .hero:not(.slim) { padding-top: 5.6rem; }
+  .hero:not(.slim) { padding-top: 15.6rem; }
   .board-right { top: 2.7rem; }
 }
 }
