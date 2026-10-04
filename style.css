@@ -249,35 +249,6 @@ footer::before { content: ""; display: block; height: 8px; background: var(--rib
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 footer strong { color: #fff; font-family: var(--display); font-size: 1.1rem; }
 footer em { color: #FFD7A6; }
-
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-/* Faint formulas in the home-page header: one on each side */
-/* Faint formulas in the home-page header: one on each side */
-.board-left, .board-right {
-  position: absolute; z-index: -2; user-select: none; pointer-events: none;
-  color: rgba(255,255,255,.13);
-  font-size: clamp(1rem, 2.4vw, 2rem);
-}
-.board-left {
-  left: 4%; top: 1rem;
-  -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
-          mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
-}
-.board-right {
-  right: 4%; top: clamp(9rem, 18vw, 14.5rem); text-align: right;
-  -webkit-mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
-          mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
-}
-.board-left mjx-container, .board-right mjx-container { margin: 0 !important; }
-@media (max-width: 1100px) {
-  .board-left, .board-right { font-size: clamp(.85rem, 2.4vw, 1.2rem); color: rgba(255,255,255,.2); }
-  .board-left  { top: .8rem; }
-  .board-right { top: auto; bottom: auto; }
-@media (max-width: 600px) {
-  .hero:not(.slim) { padding-top: 1.5rem; }
-  .board-right { top: 2.7rem; }
-}
-}
 :root {
   --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -299,13 +270,3 @@ footer em { color: #FFD7A6; }
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
           mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
 }
-/* ===== Formulas in the header: one row above the title (no positioning) ===== */
-.board-left, .board-right, .board-under { display: none !important; }   /* hides any older formula code */
-.formula-strip {
-  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
-  gap: .3rem 2rem; margin: 0 0 1.5rem;
-  color: rgba(255,255,255,.2); font-size: clamp(.9rem, 2vw, 1.5rem);
-  user-select: none; pointer-events: none;
-}
-.formula-strip span:last-child { margin-left: auto; text-align: right; }
-.formula-strip mjx-container { margin: 0 !important; }
