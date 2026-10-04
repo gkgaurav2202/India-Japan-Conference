@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talks and Abstracts | Indo-Japan Conference</title>
+<meta name="description" content="Talk titles and abstracts of the Indo-Japan Conference, 15–17 December.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Crect width='30' height='60' fill='%23FF9933'/%3E%3Crect x='30' width='30' height='60' fill='%23138808'/%3E%3Crect x='60' width='30' height='60' fill='%23BC002D'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Typesets the formulas in abstracts (needs an internet connection) -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<style>
+  /* Extra styles for this page only */
+  .toolbar { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 0 1.6rem; }
+  .toolbar button {
+    font: inherit; font-weight: 600; cursor: pointer;
+    padding: .55rem 1.2rem; border: 2px solid var(--indigo); background: var(--white); color: var(--indigo); border-radius: 2px;
+  }
+  .toolbar button:hover { background: var(--indigo); color: #fff; box-shadow: 0 4px 0 var(--saffron); }
+
+  .talks { display: grid; gap: 1rem; }
+  .talk { --c: var(--saffron); background: var(--white); border-left: 5px solid var(--c); scroll-margin-top: 84px; }
+  .talk:nth-child(4n+2) { --c: var(--crimson); }
+  .talk:nth-child(4n+3) { --c: var(--green); }
+  .talk:nth-child(4n+4) { --c: var(--indigo-2); }
+  .talk:target { box-shadow: 0 0 0 3px var(--saffron); }
+
+  .talk summary {
+    list-style: none; cursor: pointer; padding: 1.1rem 1.4rem;
+    display: grid; grid-template-columns: 1fr auto; column-gap: 1rem; align-items: center;
+  }
+  .talk summary::-webkit-details-marker { display: none; }
+  .talk summary::after {
+    content: "+"; grid-column: 2; grid-row: 1 / span 3;
+    width: 2rem; height: 2rem; border: 2px solid var(--c); border-radius: 50%;
+    display: grid; place-items: center; font-weight: 700; line-height: 1; color: var(--indigo);
+  }
+  .talk[open] summary::after { content: "\2212"; }
+  .talk .who { font-family: var(--display); font-size: 1.4rem; color: var(--indigo); line-height: 1.2; }
+  .talk .title { margin: .2rem 0 0; font-weight: 600; font-size: 1.1rem; }
+  .talk .aff { margin: .1rem 0 0; font-size: 1rem; color: var(--muted); font-style: italic; }
+
+  .talk .body { margin: 0 1.4rem; padding: 1rem 0 1.3rem; border-top: 1px solid var(--line); }
+  .talk .when { margin: 0 0 .8rem; font-size: 1rem; color: var(--muted); }
+  .talk .when b { color: var(--indigo); font-weight: 600; }
+  .talk .abstract { margin: 0; }
+  .talk .abstract + .abstract { margin-top: .8em; }
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Indo-Japan Conference</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="talks.html" aria-current="page">Talks</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="index.html#register">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="hero slim">
+  <div class="wrap">
+    <h1>Talks and Abstracts</h1>
+    <p class="theme">Titles and abstracts of the invited talks</p>
+  </div>
+</div>
+<div class="band" aria-hidden="true"></div>
+
+<section>
+  <div class="wrap">
+
+    <!--
+      HOW TO EDIT A TALK
+      1. Replace "Title to be announced" with the talk title.
+      2. Replace "To be announced" after "Day and time:" (for example: 16 December, 10:00 – 11:00).
+      3. Replace "Abstract to be announced." with the abstract. Use one <p class="abstract">...</p> per paragraph.
+         Formulas go between \( and \), for example:  \( \zeta(2,1)=\zeta(3) \)
+      Copy a whole <details>...</details> block to add a talk. Keep the "id" unique.
+      Talks are listed by speaker's last name; reorder the blocks if you prefer schedule order.
+      Link to one talk from anywhere with:  talks.html#kaneko
+    -->
+
+    <div class="toolbar">
+      <button type="button" id="expand-all">Show all abstracts</button>
+      <button type="button" id="collapse-all">Hide all abstracts</button>
+    </div>
+
+    <div class="talks">
+
+      <details class="talk" id="balasubramanian">
+        <summary>
+          <span class="who">R. Balasubramanian</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">The Institute of Mathematical Sciences, Chennai, India</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="kaneko">
+        <summary>
+          <span class="who">Masanobu Kaneko</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Kyushu University, Fukuoka, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="matsumoto">
+        <summary>
+          <span class="who">Kohji Matsumoto</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Nagoya University, Nagoya, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="nakasuji">
+        <summary>
+          <span class="who">Maki Nakasuji</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Sophia University, Tokyo, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="paul">
+        <summary>
+          <span class="who">Biplab Paul</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Indian Institute of Technology Bhubaneswar, India</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="rath">
+        <summary>
+          <span class="who">Purusottam Rath</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Chennai Mathematical Institute, India</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="suzuki-m">
+        <summary>
+          <span class="who">Masatoshi Suzuki</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Institute of Science Tokyo, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="suzuki-y">
+        <summary>
+          <span class="who">Yuta Suzuki</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Aichi Sangyo University, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+      <details class="talk" id="tasaka">
+        <summary>
+          <span class="who">Koji Tasaka</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Kindai University, Japan</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+        <details class="talk" id="lunia">
+        <summary>
+          <span class="who">Rashi Lunia</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Alfréd Rényi Institute of Mathematics, Budapest, Hungary</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+      
+       <details class="talk" id="hazra">
+        <summary>
+          <span class="who">Suhita Hazra</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">Chennai Mathematical Institute, Chennai, India</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+      
+      <details class="talk" id="kumar">
+        <summary>
+          <span class="who">Gaurav Kumar</span>
+          <span class="title">Title to be announced</span>
+          <span class="aff">The Institute of Mathematical Sciences, Chennai, India</span>
+        </summary>
+        <div class="body">
+          <p class="when"><b>Day and time:</b> To be announced</p>
+          <p class="abstract">Abstract to be announced.</p>
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Indo-Japan Conference</strong><br>
+      15–17 December 2026
+    </div>
+    <div><em>Multiple Zeta Values and related areas</em></div>
+  </div>
+</footer>
+
+<script>
+  // Show / hide all abstracts, and open a talk linked as talks.html#name
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.talk'));
+    function setAll(open) { items.forEach(function (d) { d.open = open; }); }
+    document.getElementById('expand-all').addEventListener('click', function () { setAll(true); });
+    document.getElementById('collapse-all').addEventListener('click', function () { setAll(false); });
+    function openFromHash() {
+      var id = decodeURIComponent(location.hash.slice(1));
+      if (!id) return;
+      var el = document.getElementById(id);
+      if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+    }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  })();
+</script>
+</body>
+</html>
