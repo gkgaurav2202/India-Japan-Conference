@@ -215,11 +215,6 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 
 /* Registration */
 #register { background-color: var(--indigo); background-image: none; color: #fff; position: relative; overflow: hidden; }
-#register::before {
-  content: "ζ(2,1) = ζ(3)"; position: absolute; right: 3%; bottom: -1rem;
-  font-family: var(--text); font-style: italic; font-size: clamp(3rem, 9vw, 7rem);
-  color: rgba(255,255,255,.06); white-space: nowrap; pointer-events: none;
-}
 #register .wrap { position: relative; }
 #register .sec-head h2 { color: #fff; }
 #register .sec-head h2::after {
@@ -254,3 +249,13 @@ footer strong { color: #fff; font-family: var(--display); font-size: 1.1rem; }
 footer em { color: #FFD7A6; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+/* Formulas in the home-page header */
+.board {
+  position: absolute; z-index: -2; right: 4%; top: clamp(4rem, 7vw, 6rem);
+  text-align: right; user-select: none; pointer-events: none;
+  color: rgba(255,255,255,.26);
+  font-size: clamp(.95rem, 1.6vw, 1.35rem);
+}
+.board div { margin: 0 0 .6em; }
+.board mjx-container { margin: 0 !important; }
+@media (max-width: 1100px) { .board { display: none; } }
