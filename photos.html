@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photos | Indo-Japan Conference</title>
+<meta name="description" content="Photographs from the Indo-Japan Conference.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 60'%3E%3Crect width='30' height='60' fill='%23FF9933'/%3E%3Crect x='30' width='30' height='60' fill='%23138808'/%3E%3Crect x='60' width='30' height='60' fill='%23BC002D'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Indo-Japan Conference</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#speakers">Speakers</a></li>
+        <li><a href="index.html#organisers">Organisers</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="photos.html" aria-current="page">Photos</a></li>
+        <li><a href="index.html#register">Register</a></li>
+        <li><a href="index.html#venue">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="hero slim">
+  <div class="wrap">
+    <h1>Photos</h1>
+    <p class="theme">Photographs from the conference</p>
+  </div>
+</div>
+<div class="band" aria-hidden="true"></div>
+
+<section>
+  <div class="wrap">
+
+    <!--
+      HOW TO ADD PHOTOS
+      1. In your GitHub repository, create a folder named "photos" and upload your images there
+         (JPG files under about 500 KB each load fastest).
+      2. Replace a placeholder <figure> below with this, using your own file name and caption:
+
+         <figure>
+           <img src="photos/photo-01.jpg" alt="Short description of the photo" loading="lazy">
+           <figcaption>Caption</figcaption>
+         </figure>
+
+      Copy a whole <figure>...</figure> block to add more photos.
+    -->
+
+    <div class="gallery">
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+      <figure><div class="box">Photo coming soon</div><figcaption>Caption</figcaption></figure>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Enlarged photo"><img alt=""></div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Indo-Japan Conference</strong><br>
+      15–17 December 2026
+    </div>
+    <div><em>Multiple Zeta Values and related areas</em></div>
+  </div>
+</footer>
+
+<script>
+  // Click a photo to enlarge it; click anywhere or press Esc to close
+  (function () {
+    var box = document.getElementById('lightbox');
+    var big = box.querySelector('img');
+    document.querySelector('.gallery').addEventListener('click', function (e) {
+      if (e.target.tagName === 'IMG') {
+        big.src = e.target.src;
+        big.alt = e.target.alt;
+        box.classList.add('open');
+      }
+    });
+    box.addEventListener('click', function () { box.classList.remove('open'); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') box.classList.remove('open');
+    });
+  })();
+</script>
+</body>
+</html>
