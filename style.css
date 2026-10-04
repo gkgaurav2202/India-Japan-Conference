@@ -243,8 +243,8 @@ section.compact { padding: clamp(2.5rem, 5vw, 3.8rem) 0; }
 .info p:last-child { margin-bottom: 0; }
 
 /* Footer */
-footer { background: #0E1635; color: #AEB8DC; padding: 0 0 2.2rem; font-size: 1.02rem; }
-footer::before { content: ""; display: block; height: 8px; background: var(--ribbon); margin-bottom: 2.2rem; }
+footer { background: #0E1635; color: #AEB8DC; padding: 0 0 1.1rem; font-size: 1.02rem; }
+footer::before { content: ""; display: block; height: 8px; background: var(--ribbon); margin-bottom: 1.1rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 footer strong { color: #fff; font-family: var(--display); font-size: 1.1rem; }
 footer em { color: #FFD7A6; }
