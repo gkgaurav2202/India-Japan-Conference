@@ -281,3 +281,6 @@ footer .footer-logos {
   padding-bottom: 1.2rem; margin-bottom: 1.2rem; border-bottom: 1px solid rgba(255,255,255,.14);
 }
 footer .footer-logos img { display: block; height: 44px; width: auto; max-width: 100%; background: #fff; padding: 4px 9px; border-radius: 3px; }
+/* ===== Footer: logos next to the conference name ===== */
+footer .footer-id { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+footer .footer-id img { display: block; height: 40px; width: auto; max-width: 100%; background: #fff; padding: 3px 8px; border-radius: 3px; }
