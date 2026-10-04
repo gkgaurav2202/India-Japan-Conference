@@ -252,9 +252,10 @@ footer em { color: #FFD7A6; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 /* Faint formulas in the home-page header: one on each side */
+/* Faint formulas in the home-page header: one on each side */
 .board-left, .board-right {
   position: absolute; z-index: -2; user-select: none; pointer-events: none;
-  color: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.13);
   font-size: clamp(1rem, 2.4vw, 2rem);
 }
 .board-left {
@@ -262,16 +263,17 @@ footer em { color: #FFD7A6; }
   -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
           mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,1) 100%);
 }
-/* Second formula: at the right side of the header */
 .board-right {
-  position: absolute; z-index: -2; right: 4%;
-  top: max(clamp(4.4rem, calc(100vw * 100 - 46400px), 9rem), min(18vw, 14.5rem));
-  display: block; margin: 0; text-align: right;
-  font-size: clamp(.95rem, 2.4vw, 2.1rem); color: rgba(255,255,255,.2);
+  right: 4%; top: clamp(9rem, 18vw, 14.5rem); text-align: right;
   -webkit-mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
           mask-image: linear-gradient(to left, #000 55%, rgba(0,0,0,1) 100%);
 }
-.board-under { display: none; }
+.board-left mjx-container, .board-right mjx-container { margin: 0 !important; }
+@media (max-width: 1100px) {
+  .board-left, .board-right { font-size: clamp(.85rem, 2.4vw, 1.2rem); color: rgba(255,255,255,.2); }
+  .board-left  { top: .8rem; }
+  .board-right { top: auto; bottom: .9rem; }
+}
 :root {
   --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
 }
