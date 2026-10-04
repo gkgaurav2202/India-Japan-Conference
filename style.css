@@ -273,9 +273,20 @@ footer em { color: #FFD7A6; }
   .board-left  { top: .8rem; }
   .board-right { top: .8rem; }
 }
+/* Phones: the second formula sits just under the title */
 @media (max-width: 600px) {
-  .hero:not(.slim) { padding-top: 5.6rem; }
-  .board-right { top: 2.7rem; }
+  .hero:not(.slim) { padding-bottom: 6rem; }
+  .board-right {
+    position: static; display: block; margin: 1rem 0 0; text-align: left;
+    font-size: clamp(.9rem, 3.6vw, 1.15rem);
+    -webkit-mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
+            mask-image: linear-gradient(to right, #000 55%, rgba(0,0,0,.4) 100%);
+  }
+  .blackboard { background: rgba(8,14,40,.9); }
+  .hero::before {   /* shorter wave band on phones */
+    -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 20%);
+            mask-image: linear-gradient(to top, #000 0%, transparent 20%);
+  }
 }
 /* ============ Grid + wave pattern on every indigo section ============ */
 :root {
