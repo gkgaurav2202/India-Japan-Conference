@@ -267,3 +267,37 @@ footer em { color: #FFD7A6; }
 }
 .board-left mjx-container, .board-right mjx-container { margin: 0 !important; }
 @media (max-width: 1100px) { .board-left, .board-right { display: none; } }
+/* ============ Grid + wave pattern on every indigo section ============ */
+:root {
+  --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Registration section */
+#register { isolation: isolate; }
+#register::before {   /* waves rising from the bottom */
+  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background-image: var(--waves); background-size: 72px 36px;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 40%);
+          mask-image: linear-gradient(to top, #000 0%, transparent 40%);
+}
+#register::after {    /* graph-paper grid fading downward */
+  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+          mask-image: linear-gradient(to bottom, #000 0%, transparent 80%);
+}
+
+/* Footer */
+footer { position: relative; isolation: isolate; }
+footer::after {
+  content: ""; position: absolute; inset: 0; z-index: -3; pointer-events: none;
+  background-image:
+    var(--waves),
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 72px 36px, 40px 40px, 40px 40px;
+  background-position: left bottom, 0 0, 0 0;
+}
