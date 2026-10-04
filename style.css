@@ -273,6 +273,10 @@ footer em { color: #FFD7A6; }
   .board-left, .board-right { font-size: clamp(.85rem, 2.4vw, 1.2rem); color: rgba(255,255,255,.2); }
   .board-left  { top: .8rem; }
   .board-right { top: auto; bottom: .9rem; }
+@media (max-width: 600px) {
+  .hero:not(.slim) { padding-top: 5.6rem; }
+  .board-right { top: 2.7rem; }
+}
 }
 :root {
   --waves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='36' viewBox='0 0 72 36'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='1.2'%3E%3Ccircle cx='36' cy='36' r='34'/%3E%3Ccircle cx='36' cy='36' r='26'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3Ccircle cx='36' cy='36' r='10'/%3E%3Ccircle cx='0' cy='18' r='34'/%3E%3Ccircle cx='0' cy='18' r='26'/%3E%3Ccircle cx='0' cy='18' r='18'/%3E%3Ccircle cx='0' cy='18' r='10'/%3E%3Ccircle cx='72' cy='18' r='34'/%3E%3Ccircle cx='72' cy='18' r='26'/%3E%3Ccircle cx='72' cy='18' r='18'/%3E%3Ccircle cx='72' cy='18' r='10'/%3E%3C/g%3E%3C/svg%3E");
