@@ -1,1 +1,1 @@
-# Indo-Japan-Conference
+# India-Japan-Conference
