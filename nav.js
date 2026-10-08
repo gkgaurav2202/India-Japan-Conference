@@ -9,7 +9,7 @@
     ['Speakers',   'speakers.html'],
     ['Schedule',   'schedule.html'],
     ['Talks',      'talks.html'],
-    ['Photos',     'photos.html'],
+ //   ['Photos',     'photos.html'],
     ['Register',   'index.html#register'],
   ];
 
